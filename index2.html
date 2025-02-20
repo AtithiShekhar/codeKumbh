@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('travel2.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+.contact-form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 15px;
+    width: 400px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: scale(0.8);
+    animation: popIn 0.3s ease-in-out forwards;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    background: rgba(255, 0, 0, 0.6);
+    padding: 5px 10px;
+    border-radius: 50%;
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+#close-btn:hover {
+    background: rgba(255, 0, 0, 1);
+    transform: rotate(90deg);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+}
+
+input:focus, textarea:focus {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+button {
+    background: linear-gradient(135deg, #ff8a00, #e52e71);
+    color: white;
+    border: none;
+    padding: 12px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.3s ease-in-out;
+    font-size: 16px;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #e52e71, #ff8a00);
+    transform: translateY(-3px);
+}
+
+.contact-details {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    animation: slideIn 0.5s ease-in-out;
+}
+
+.faq {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.faq h3 {
+    color: white;
+}
+
+.faq p {
+    color: white;
+}
+
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        nav {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        nav ul li a:hover {
+            color: #ffcc00;
+            transform: translateY(-3px);
+        }
+
+        #contact-form-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+      
+
+        @keyframes popIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        #close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 20px;
+            cursor: pointer;
+            color: black;
+            transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        #close-btn:hover {
+            color: red;
+            transform: rotate(90deg);
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.6);
+        }
+
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 12px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background: #0056b3;
+            transform: translateY(-3px);
+        }
+
+        .contact-details {
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            animation: slideIn 0.5s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .contact-details h3 {
+            margin: 0;
+            font-size: 1.2em;
+            color: #000000;
+        }
+
+        .contact-details p {
+            margin: 5px 0;
+            font-size: 0.9em;
+            color: #000000;
+        }
+
+        .faq {
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            animation: slideIn 0.5s ease-in-out;
+        }
+
+        .faq h3 {
+            margin: 0;
+            font-size: 1.2em;
+            color: #000000;
+            cursor: pointer;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .faq h3:hover {
+            color: #007bff;
+        }
+
+        .faq p {
+            margin: 10px 0 0;
+            font-size: 0.9em;
+            color: #000000;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        }
+
+        .faq.active p {
+            max-height: 200px;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="index2.html">ABOUT US</a></li>
+            <li><a href="#">BLOGS</a></li>
+            <li><a href="gallery.html">GALLERY</a></li>
+            <li><a href="#">DESTINATIONS</a></li>
+            <li><a href="safe.html">PLANNING</a></li>
+            <li><a href="index1.html" id="contact-link">CONTACT</a></li>
+        </ul>
+    </nav>
+    <div id="contact-form-container">
+        <div class="contact-form">
+            <span id="close-btn">&times;</span>
+            <h2>About PentaTravels</h2>
+            <p>PentaTravels was created with one simple goal: to make travel experiences seamless, exciting, and memorable. Whether you're looking for expert travel guides, AI-powered recommendations, or personalized itineraries, we offer a range of services to meet your travel needs. Our team is dedicated to helping you explore the world with ease, ensuring a hassle-free and enjoyable journey.</p>
+            
+            <p>We understand that travel is a deeply personal experience, and we are committed to providing resources that are reliable, curated, and tailored to your preferences. Our platform is your trusted companion for discovering new destinations, planning trips, and making the most of your adventures.</p>
+            <div class="contact-details">
+                <h3>Contact Us</h3>
+                <p>Email: atithishekhar@gmail.com</p>
+                <p>Phone: +91 9696805245</p>
+            </div>
+    
+            <div class="faq">
+                <h3 onclick="toggleFAQ(this)">What services do we provide?</h3>
+                <p>We offer expert travel consultations, AI-powered trip planning, and curated travel guides to help you explore destinations effortlessly. Our services are designed to be flexible, informative, and easily accessible, making travel planning smoother than ever.</p>
+    
+                <h3 onclick="toggleFAQ(this)">How can we help with trip planning?</h3>
+                <p>Our AI-powered platform provides personalized itineraries based on your preferences. Whether you need budget-friendly travel options, luxury getaways, or adventure-packed trips, we ensure that every aspect of your journey is well-planned and stress-free.</p>
+    
+                <h3 onclick="toggleFAQ(this)">Do we offer travel packages?</h3>
+                <p>Yes! We offer customized travel packages for solo travelers, families, honeymooners, and groups. Our packages include accommodation, transportation, guided tours, and special experiences to make your trip truly unforgettable.</p>
+    
+                <h3 onclick="toggleFAQ(this)">Can we assist with travel documentation?</h3>
+                <p>Absolutely! We provide guidance on visa applications, passport requirements, travel insurance, and other essential documentation to ensure a smooth and hassle-free travel experience.</p>
+            </div>
+        </div>
+    </div>
+    
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const contactLink = document.getElementById("contact-link");
+            const contactFormContainer = document.getElementById("contact-form-container");
+            const closeBtn = document.getElementById("close-btn");
+
+            contactLink.addEventListener("click", function (event) {
+                event.preventDefault();
+                contactFormContainer.style.display = "flex";
+            });
+
+            closeBtn.addEventListener("click", function () {
+                contactFormContainer.style.display = "none";
+            });
+
+            contactFormContainer.addEventListener("click", function (event) {
+                if (event.target === contactFormContainer) {
+                    contactFormContainer.style.display = "none";
+                }
+            });
+        });
+
+        function toggleFAQ(element) {
+            const faq = element.parentElement;
+            faq.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>

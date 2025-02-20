@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Planning in Tourism</title>
+    <style>
+        /* Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        /* Global Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            overflow-x: hidden;
+        }
+
+        /* Navbar Styles */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            transition: all 0.4s ease-in-out;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffcc00;
+            transform: scale(1.1);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: url('nature1.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .hero h1 {
+            color: white;
+            font-size: 50px;
+            font-weight: 700;
+            position: relative;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            animation: slideIn 1.2s ease-in-out;
+        }
+
+        /* Content Section */
+        .content {
+            background: white;
+            padding: 80px 10%;
+            text-align: left;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1.2s ease-in-out forwards;
+        }
+
+        section {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+            font-size: 28px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        h2::after {
+            content: "";
+            width: 50px;
+            height: 4px;
+            background: #ffcc00;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Keyframe Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="index2.html">ABOUT US</a></li>
+            <li><a href="#">BLOGS</a></li>
+            <li><a href="gallery.html">GALLERY</a></li>
+            <li><a href="#">DESTINATIONS</a></li>
+            <li><a href="packing.html">PLANNING</a></li>
+            <li><a href="index1.html" id="contact-link">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero">
+        <h1>Budget Planning in Tourism</h1>
+    </div>
+
+    <div class="content">
+        <section>
+            <h2>Why Budget Planning is Important?</h2>
+            <p>Budget planning in tourism is essential for a seamless travel experience. It helps travelers manage expenses, avoid unnecessary spending, and make the most of their trips without financial stress.</p>
+            <p>Proper budgeting ensures that every aspect of a trip, including transportation, accommodation, food, and activities, is planned well in advance. This allows travelers to maximize their experiences while staying within their financial limits.</p>
+        </section>
+
+        <section>
+            <h2>Steps to Plan Your Budget</h2>
+            <p>1. Research Your Destination: Understand the cost of living, transportation, and tourist attractions in the destination.</p>
+            <p>2. Set a Budget: Define a realistic budget covering flights, lodging, meals, and entertainment.</p>
+            <p>3. Use Budgeting Tools: Utilize apps and spreadsheets to track expenses and ensure spending stays on track.</p>
+            <p>4. Book in Advance: Early bookings for flights and hotels can save money and avoid last-minute price surges.</p>
+            <p>5. Plan for Emergencies: Always keep a buffer amount for unexpected situations.</p>
+        </section>
+    </div>
+
+</body>
+</html>

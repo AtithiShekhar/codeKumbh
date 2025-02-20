@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    color: white;
+    background-color: black;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+    padding: 10px;
+    display: block;
+}
+
+.nav-links a:hover {
+    color: #00bfff;
+    transform: scale(1.1);
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.9);
+    min-width: 160px;
+    list-style: none;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    transform: translateY(5px);
+}
+
+.dropdown-menu li {
+    position: relative;
+}
+
+.dropdown-menu a {
+    padding: 10px;
+    display: block;
+    color: white;
+    transition: 0.3s;
+}
+
+.dropdown-menu a:hover {
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+/* Sub-dropdown for cities */
+.sub-menu {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    min-width: 150px;
+    list-style: none;
+    padding: 0;
+    border-radius: 5px;
+}
+
+.sub-dropdown:hover .sub-menu {
+    display: block;
+}
+
+.sub-menu a {
+    padding: 10px;
+    display: block;
+    color: white;
+    transition: 0.3s;
+}
+
+.sub-menu a:hover {
+    background-color: transparent;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    background: url('travel.jpeg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 18px;
+    margin: 20px 0;
+    font-weight: 300;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #0096ff;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #007ace;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+}
+
+/* Modal Background */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Modal Content Box */
+.modal-content {
+    background-color: white;
+    width: 40%;
+    padding: 20px;
+    margin: 10% auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Close Button */
+.close-btn {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-btn:hover {
+    color: red;
+}
+
+/* Input Fields */
+.modal-content input, .modal-content textarea {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border 0.3s;
+}
+
+.modal-content input:focus, .modal-content textarea:focus {
+    border: 1px solid #007bff;
+}
+
+/* Submit Button */
+.modal-content button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.modal-content button:hover {
+    transform: scale(1.05);
+}
+.more-content {
+    background-color: #111;
+    padding: 50px;
+    text-align: center;
+}
+
+.more-content h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.content-box p {
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 40px;
+    color: #bbb;
+}
+
+/* Destination Grid */
+.destination-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.destination-card {
+    background-color: #222;
+    padding: 15px;
+    border-radius: 10px;
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.destination-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.destination-card h3 {
+    margin-top: 15px;
+    font-size: 22px;
+}
+
+.destination-card p {
+    font-size: 16px;
+    color: #bbb;
+}
+
+.destination-card:hover {
+    transform: scale(1.05);
+}
+.reviews {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f8f9fa;
+}
+
+.reviews h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.review {
+    max-width: 600px;
+    background: white;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.review:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.review p {
+    font-size: 1.1em;
+    color: #555;
+    font-style: italic;
+    margin: 0;
+    flex: 1;
+}
+
+.review strong {
+    display: block;
+    margin-top: 10px;
+    font-size: 1em;
+    color: #007bff;
+}
+
+.review-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 20px;
+    border: 3px solid #007bff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.review:nth-child(odd) .review-photo {
+    order: -1; /* Image on the left for odd reviews */
+}
+
+.review:nth-child(even) .review-photo {
+    order: 1; /* Image on the right for even reviews */
+}

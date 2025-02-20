@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taj Mahal - A Timeless Beauty</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('losang.jpg') no-repeat center center fixed;
+            background-size: cover;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        nav {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav ul li a:hover {
+            color: #ffcc00;
+        }
+
+        .fullscreen-image {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .fullscreen-image h1 {
+            font-size: 4rem;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .content {
+            padding: 100px 20px 50px;
+            background-color: #f9f9f9;
+            color: #333;
+            text-align: center;
+        }
+
+        .content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            animation: slideIn 1.5s ease-out;
+        }
+
+        .content p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(-100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        #contact-form-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .contact-form {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 25px;
+            border-radius: 10px;
+            width: 400px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transform: scale(0.8);
+            animation: popIn 0.3s ease-in-out forwards;
+        }
+
+        @keyframes popIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        #close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 20px;
+            cursor: pointer;
+            color: black;
+            transition: color 0.3s ease-in-out;
+        }
+
+        #close-btn:hover {
+            color: red;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.6);
+        }
+
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 12px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="index2.html">ABOUT US</a></li>
+            <li><a href="#">BLOGS</a></li>
+            <li><a href="gallery.html">GALLERY</a></li>
+            <li><a href="#">DESTINATIONS</a></li>
+            <li><a href="packing.html">PLANNING</a></li>
+            <li><a href="index1.html" id="contact-link">CONTACT</a></li>
+        </ul>
+    </nav>
+    <div class="fullscreen-image">
+        <h1>
+            The Hollywood Sign
+        </h1>
+    </div>
+
+    <div class="content">
+        <h2>About the Hollywood Sign</h2>
+        <p>
+            The Hollywood Sign is one of the most iconic landmarks in the world, symbolizing the entertainment industry and the city of Los Angeles. Perched on Mount Lee in the Hollywood Hills, the sign overlooks the sprawling city and attracts millions of visitors every year. Originally created as an advertisement for a real estate development, the Hollywood Sign has since become a global symbol of fame, ambition, and the magic of cinema.
+        </p>
+        <p>
+            The sign was first erected in 1923 and originally read "Hollywoodland," promoting a new housing development in the area. The massive white letters, each standing 45 feet tall, quickly became a recognizable part of the Los Angeles skyline. Over the years, the sign fell into disrepair, but a major restoration effort in 1978, led by celebrities like Hugh Hefner and Alice Cooper, helped preserve it for future generations.
+        </p>
+        <p>
+            Today, the Hollywood Sign is a protected landmark and an essential stop for visitors to Los Angeles. While direct access to the sign is restricted, there are several scenic hiking trails in Griffith Park that offer breathtaking views of the sign and the city below. The Griffith Observatory and Lake Hollywood Park are also popular spots to admire the sign and take memorable photos.
+        </p>
+        <p>
+            Beyond its visual appeal, the Hollywood Sign represents the dreams and aspirations of countless individuals seeking success in the entertainment industry. It has been featured in numerous films, TV shows, and music videos, reinforcing its status as a cultural icon. The sign is often associated with the glamour of Hollywood, red carpet premieres, and the golden age of cinema.
+        </p>
+        <p>
+            Whether you're a movie enthusiast, a hiker, or a first-time visitor to Los Angeles, the Hollywood Sign remains a must-see attraction. Its history, cultural significance, and stunning location make it an unforgettable symbol of the city and the entertainment capital of the world.
+        </p>
+    </div>
+    
+   
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const contactLink = document.getElementById("contact-link");
+            const contactFormContainer = document.getElementById("contact-form-container");
+            const closeBtn = document.getElementById("close-btn");
+            const contactForm = document.getElementById("contact-form");
+
+            contactLink.addEventListener("click", function (event) {
+                event.preventDefault();
+                contactFormContainer.style.display = "flex";
+            });
+
+            closeBtn.addEventListener("click", function () {
+                contactFormContainer.style.display = "none";
+            });
+
+            contactFormContainer.addEventListener("click", function (event) {
+                if (event.target === contactFormContainer) {
+                    contactFormContainer.style.display = "none";
+                }
+            });
+
+            contactForm.addEventListener("submit", function (event) {
+                event.preventDefault(); 
+                alert("Thank you for contacting us! We will get back to you soon.");
+                window.location.href = "index.html"; 
+            });
+        });
+    </script>
+</body>
+</html>
