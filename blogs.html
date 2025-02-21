@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Blogs</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #e8e8e8, #fad0c4);
+            overflow-x: hidden;
+        }
+        nav {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px 0;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            animation: slideDown 1s ease-in-out;
+        }
+        nav ul {
+            list-style: none;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            transition: color 0.4s ease-in-out;
+            padding: 10px;
+        }
+        nav ul li a:hover {
+            color: #f39c12;
+            transform: scale(1.1);
+        }
+        .container {
+            width: 80%;
+            margin: 100px auto 0;
+            padding: 20px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .blog {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 15px;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            transform: scale(0.9);
+            transition: transform 0.5s;
+        }
+        .blog:hover {
+            transform: scale(1);
+        }
+        .blog img {
+            width: 40%;
+            border-radius: 15px;
+            margin-right: 20px;
+            transition: transform 0.5s ease-in-out;
+        }
+        .blog img:hover {
+            transform: rotate(5deg) scale(1.05);
+        }
+        .blog-content {
+            flex: 1;
+            opacity: 0;
+            animation: fadeInText 1.5s forwards 0.5s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInText {
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="index2.html">ABOUT US</a></li>
+            <li><a href="blogs.html">BLOGS</a></li>
+            <li><a href="gallery.html">GALLERY</a></li>
+            <li><a href="#">DESTINATIONS</a></li>
+            <li><a href="budgetPlan.html">PLANNING</a></li>
+            <li><a href="index1.html" id="contact-link">CONTACT</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <div class="blog">
+            <img src="nature3.jpg" alt="Atithi's Travel Image">
+            <div class="blog-content">
+                <h2>Atithi's Blog: The Enchanting Beauty of Bali</h2>
+                <p>
+                    Bali, the Island of Gods, is a paradise where towering volcanic mountains meet pristine beaches and crystal-clear waters. 
+                    From the lush green rice terraces of Ubud to the breathtaking cliffs of Uluwatu, every part of Bali is a masterpiece of nature. 
+                    The island offers stunning beaches like Seminyak and Nusa Dua, where golden sands meet the turquoise sea, creating the perfect 
+                    escape for relaxation. Adventure seekers can hike Mount Batur at sunrise, witnessing a spectacular view from the top, while 
+                    those looking for peace can meditate in the tranquil temples. With its vibrant marine life, scenic waterfalls, and warm hospitality, 
+                    Bali remains a dream destination for nature lovers.
+                </p>
+            </div>
+        </div>
+        <div class="blog">
+            <img src="nature2.jpg" alt="Naresh's Travel Image" style="order:2;">
+            <div class="blog-content">
+                <h2>Naresh's Blog: Exploring the Serenity of the Himalayas</h2>
+                <p>The Himalayas are a paradise for nature lovers, offering breathtaking landscapes, crisp mountain air, and serene monasteries. Nestled in the heart of these towering peaks, one can find small villages where life moves at a peaceful pace. The lush green valleys, snow-capped summits, and gushing rivers create a picture-perfect retreat from the chaos of city life. Trekking through the rugged terrain, witnessing the mesmerizing sunrise over the peaks, and sipping warm tea in a cozy wooden hut are experiences that stay with you forever. The Himalayas embody tranquility, making them the perfect destination for adventure and spiritual rejuvenation.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="blog">
+            <img src="indiagate.jpeg" alt="Atithi's Travel Image">
+            <div class="blog-content">
+                <h2>Rahuls Blog: The Enchanting Beauty of Red Fort</h2>
+               <p>
+                Delhi is a city that will assault your senses in the best possible way! From the stunning Red Fort to the bustling streets of Chandni Chowk, there's no shortage of excitement. Don't miss the delicious street food – try a classic butter chicken at Moti Mahal. 5/5 stars!
+               </p>
+            </div>
+        </div>
+</body>
+</html>
